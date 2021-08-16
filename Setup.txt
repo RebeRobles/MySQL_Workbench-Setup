@@ -1,0 +1,35 @@
+Para generar consultas:
+
+Muestra todos los campos de una tabla
+select * from users;
+
+Muestra los campos seleccionados de una tabla
+select first_name, last_name, birthday from users;
+
+Muestra todos los usuarios cuyo nombre comienza con la letra V
+select id, first_name, last_name, birthday
+from users
+where first_name like V%;
+
+Para insertar datos:
+
+Insertar datos en la tabla users
+insert into users(first_name, last_name, handle, birthday, created_at, updated_at)
+values('Michael', 'Jordan', 'airjordan', '1963-02-17', now(), now());
+
+Insertar datos en la tabla tweets
+insert into tweets(tweet, user_id, created_at, updated_at)
+values('I am happy to be here', 6, now(), now());
+
+Para actualizar datos:
+
+Agregar handle a Stephen Curry
+update users 
+set handle = 'chef_curry', updated_at = now()
+where id = 5;
+
+Para eliminar datos:
+
+Eliminando a Stephen Curry
+delete from users
+where first_name = 'Stephen'
